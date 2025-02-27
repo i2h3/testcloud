@@ -1,4 +1,4 @@
-# Testcloud
+# Testcloud ☁️👩🏻‍🔬
 
 A simple setup which consists of a [Nextcloud](https://hub.docker.com/_/nextcloud) and [MariaDB](https://hub.docker.com/_/mariadb) container.
 
