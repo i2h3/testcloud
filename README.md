@@ -1,4 +1,4 @@
-# Testcloud ☁️👩🏻‍🔬
+# Testcloud ☁️👩🏻‍🔬☁️
 
 A simple setup which consists of a [Nextcloud](https://hub.docker.com/_/nextcloud) and [MariaDB](https://hub.docker.com/_/mariadb) containers.
 This is targeting macOS with Docker Desktop installed.
@@ -7,9 +7,9 @@ This is targeting macOS with Docker Desktop installed.
 
 I frequently need a fresh and local Nextcloud deployment for:
 
-* Reproducing reported problems around Nextcloud or its client apps
+* Reproducing reported problems around Nextcloud or its client apps in scope of customer support
 * Trying out Nextcloud features
-* Running automated client app tests with clean servers
+* Running automated client app tests with clean servers, in example Xcode UI tests
 
 ⚠️ **Do not use this in production or public!**
 This is intended for use on developer devices within a local and secure network only.
