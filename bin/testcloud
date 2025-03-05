@@ -1,0 +1,32 @@
+#!/usr/bin/env zsh
+
+arguments=("start" "shell" "stop" "remove")
+script_path=$(dirname "$(realpath "$0")")
+compose_file="$script_path/../compose.yml"
+
+if [ $# -eq 0 ]; then
+  echo "Usage: $0 <argument>"
+  exit 1
+fi
+
+argument=$1
+
+# Handle the argument using a case statement
+case $argument in
+  start)
+    docker compose --file "$compose_file" up --detach --build
+    ;;
+  shell)
+    docker exec --interactive --tty --user=www-data nextcloud-app /bin/bash
+    ;;
+  stop)
+    docker compose --file "$compose_file" stop
+    ;;
+  remove)
+    docker compose --file "$compose_file" rm --force --stop
+    ;;
+  *)
+    echo "Invalid argument. Valid arguments are: ${arguments[@]}"
+    exit 1
+    ;;
+esac
