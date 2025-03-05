@@ -23,7 +23,7 @@ case $argument in
     docker compose --file "$compose_file" stop
     ;;
   remove)
-    docker compose --file "$compose_file" rm --force --stop
+    docker compose --file "$compose_file" down --volumes
     ;;
   *)
     echo "Invalid argument. Valid arguments are: ${arguments[@]}"
